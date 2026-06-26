@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giuseppe's Cool Homepage 1999</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header class="top-banner">
+      <p class="small-text">Benvenuto nel sito più importante del World Wide Web</p>
+
+      <h1>
+        <span class="rainbow-text">GIUSEPPE'S</span>
+        <span class="blink">COOL</span>
+        HOMEPAGE
+      </h1>
+
+      <p class="construction">
+        SITO UFFICIALMENTE IN COSTRUZIONE DAL 1999
+      </p>
+
+      <div class="marquee-box">
+        <div class="marquee-track">
+          Benvenuto navigatore. Firma il guestbook. Non rubare le immagini.
+          Questo sito è ottimizzato per monitor da 800x600. Grazie per la visita.
+        </div>
+      </div>
+    </header>
+
+    <nav class="retro-nav">
+      <a href="#home">HOME</a>
+      <a href="#guestbook">GUESTBOOK</a>
+      <a href="#about">CHI SONO</a>
+      <a href="#links">LINK AMICI</a>
+    </nav>
+
+    <main id="home" class="content-grid">
+      <aside class="sidebar">
+        <section class="side-box">
+          <h2>MENU PRINCIPALE</h2>
+
+          <a href="#guestbook">Firma il guestbook</a>
+          <a href="#about">Chi sono io</a>
+          <a href="#links">Siti consigliati</a>
+          <a href="#footer">Contatta il webmaster</a>
+        </section>
+
+        <section class="side-box">
+          <h2>CONTATORE VISITE</h2>
+
+          <div class="counter" id="visitorCount">000000</div>
+
+          <p class="counter-note">
+            Sei il visitatore numero assolutamente reale di questa pagina.
+          </p>
+        </section>
+
+        <section class="side-box">
+          <h2>PREMI</h2>
+
+          <div class="award">TOP 5% WEB SITE</div>
+          <div class="award">HTML POWER USER</div>
+          <div class="award">NO POPUP ZONE</div>
+        </section>
+      </aside>
+
+      <section class="main-content">
+        <section class="retro-panel" id="about">
+          <h2>BENVENUTO SUL MIO SITO</h2>
+
+          <p>
+            Ciao Internet. Questo è il mio spazio personale sul World Wide Web.
+            Qui puoi leggere cose molto importanti, lasciare un messaggio e
+            capire perché nel 1999 tutti avevano sfondi stellati.
+          </p>
+
+          <p>
+            Il sito è stato costruito con impegno, HTML e una quantità non
+            autorizzata di colori fluorescenti.
+          </p>
+
+          <button id="factButton" class="retro-button">
+            CLICCA PER UNA FRASE IMPORTANTE
+          </button>
+
+          <div id="factBox" class="fact-box">
+            Premi il bottone. Non è una trappola.
+          </div>
+        </section>
+
+        <section class="retro-panel" id="guestbook">
+          <h2>FIRMA IL GUESTBOOK</h2>
+
+          <p>
+            Lascia un messaggio per dimostrare che sei passato di qui.
+            Possibilmente senza scrivere solo “ciao”.
+          </p>
+
+          <form id="guestbookForm" class="guestbook-form">
+            <label for="nameInput">Il tuo nome:</label>
+            <input
+              type="text"
+              id="nameInput"
+              maxlength="30"
+              placeholder="Es. Navigatore_92"
+              required
+            />
+
+            <label for="messageInput">Il tuo messaggio:</label>
+            <textarea
+              id="messageInput"
+              maxlength="180"
+              placeholder="Questo sito è bellissimo, complimenti webmaster."
+              required
+            ></textarea>
+
+            <button type="submit" class="retro-button">
+              INVIA MESSAGGIO
+            </button>
+          </form>
+
+          <p id="formStatus" class="form-status"></p>
+        </section>
+
+        <section class="retro-panel">
+          <h2>MESSAGGI DEI VISITATORI</h2>
+
+          <div id="guestbookEntries" class="guestbook-entries"></div>
+
+          <p id="emptyGuestbook" class="empty-guestbook">
+            Nessun messaggio. Sii il primo essere umano a scrivere qualcosa.
+          </p>
+        </section>
+
+        <section class="retro-panel" id="links">
+          <h2>LINK AMICI</h2>
+
+          <div class="links-grid">
+            <a href="#" class="fake-link">Super Motori 2000</a>
+            <a href="#" class="fake-link">Ricette della Nonna Online</a>
+            <a href="#" class="fake-link">Chat Libera Italia</a>
+            <a href="#" class="fake-link">Club del Winamp</a>
+            <a href="#" class="fake-link">Pagina Personale di Marco</a>
+            <a href="#" class="fake-link">Misteri e Leggende Web</a>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <p>Best viewed with Netscape Navigator at 800x600.</p>
+      <p>Ultimo aggiornamento: <span id="lastUpdate"></span></p>
+      <p>Webmaster: giuseppe@example.com</p>
+      <p class="copyright">Copyright 1999-2026. Tutti i diritti quasi riservati.</p>
+    </footer>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>

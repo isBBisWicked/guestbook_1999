@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #000080;
+  background-image:
+    radial-gradient(circle, #ffffff 1px, transparent 1px),
+    radial-gradient(circle, #55ffff 1px, transparent 1px);
+  background-size: 22px 22px, 35px 35px;
+  background-position: 0 0, 10px 12px;
+}
+
+.page-wrapper {
+  width: min(1000px, calc(100% - 24px));
+  margin: 20px auto;
+  border: 5px ridge #ffffff;
+  background: #d8d8d8;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.55);
+}
+
+.top-banner {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px ridge #ffffff;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 300% 100%;
+  animation: bannerMove 5s linear infinite;
+}
+
+.small-text {
+  margin: 0 0 8px;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #0000aa;
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 0.05em;
+  text-shadow: 3px 3px 0 #ffffff;
+}
+
+.rainbow-text {
+  color: #ff0000;
+  animation: colorShift 1s steps(1) infinite;
+}
+
+.blink {
+  color: #000000;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+.construction {
+  margin-bottom: 14px;
+  color: #aa0000;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.marquee-box {
+  overflow: hidden;
+  border: 3px inset #ffffff;
+  color: #ffffff;
+  white-space: nowrap;
+  background: #000000;
+}
+
+.marquee-track {
+  display: inline-block;
+  padding: 8px 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  animation: scrollText 18s linear infinite;
+}
+
+.retro-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 4px ridge #ffffff;
+  background: #000000;
+}
+
+.retro-nav a,
+.fake-link {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 3px outset #ffffff;
+  color: #ffff00;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  background: #0000aa;
+}
+
+.retro-nav a:hover,
+.fake-link:hover {
+  border-style: inset;
+  color: #ffffff;
+  background: #ff0000;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px;
+}
+
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.side-box,
+.retro-panel {
+  border: 4px ridge #ffffff;
+  background: #ffffcc;
+}
+
+.side-box {
+  padding: 12px;
+}
+
+.side-box h2,
+.retro-panel h2 {
+  margin-bottom: 12px;
+  padding: 7px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+  background: #000080;
+}
+
+.side-box a {
+  display: block;
+  margin-bottom: 8px;
+  color: #0000ee;
+  font-weight: bold;
+}
+
+.side-box a:visited {
+  color: #551a8b;
+}
+
+.counter {
+  padding: 9px;
+  border: 3px inset #ffffff;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.12em;
+  background: #000000;
+}
+
+.counter-note {
+  margin: 10px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.award {
+  margin-top: 8px;
+  padding: 9px 5px;
+  border: 3px outset #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-align: center;
+  background: linear-gradient(135deg, #ffff00, #ff9900);
+}
+
+.main-content {
+  display: grid;
+  gap: 14px;
+}
+
+.retro-panel {
+  padding: 16px;
+}
+
+.retro-panel p {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.retro-button {
+  padding: 9px 14px;
+  border: 4px outset #ffffff;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #008000;
+}
+
+.retro-button:hover {
+  border-style: inset;
+  background: #aa0000;
+}
+
+.fact-box {
+  margin-top: 14px;
+  padding: 12px;
+  border: 3px dashed #ff0000;
+  color: #000080;
+  font-weight: bold;
+  background: #ffffff;
+}
+
+.guestbook-form {
+  display: grid;
+  gap: 8px;
+}
+
+.guestbook-form label {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.guestbook-form input,
+.guestbook-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 3px inset #ffffff;
+  color: #000000;
+  font-family: "Courier New", monospace;
+  background: #ffffff;
+}
+
+.guestbook-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-status {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: #008000;
+  font-weight: bold;
+}
+
+.guestbook-entries {
+  display: grid;
+  gap: 12px;
+}
+
+.guestbook-entry {
+  padding: 12px;
+  border: 3px groove #ffffff;
+  background: #ffffff;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px dotted #000080;
+  color: #000080;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.entry-message {
+  margin: 0;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.empty-guestbook {
+  margin: 0;
+  color: #666666;
+  font-style: italic;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.footer {
+  padding: 18px;
+  border-top: 4px ridge #ffffff;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  text-align: center;
+  background: #000000;
+}
+
+.footer p {
+  margin-bottom: 7px;
+}
+
+.footer p:last-child {
+  margin-bottom: 0;
+}
+
+.copyright {
+  color: #ffff00;
+}
+
+@keyframes blink {
+  50% {
+    visibility: hidden;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    color: #ff0000;
+  }
+
+  25% {
+    color: #0000ff;
+  }
+
+  50% {
+    color: #008000;
+  }
+
+  75% {
+    color: #ff00ff;
+  }
+
+  100% {
+    color: #ff0000;
+  }
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bannerMove {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 300% 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: 3px;
+  }
+}
