@@ -121,7 +121,7 @@ guestbookForm.addEventListener("submit", async (event) => {
 
   formStatus.textContent = "Invio del messaggio in corso...";
 
-  const { error } = await supabase
+  const { error } = await supabaseClient
     .from("guestbook_entries")
     .insert({ name, message });
 
