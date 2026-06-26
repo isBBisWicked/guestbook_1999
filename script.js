@@ -1,7 +1,7 @@
 const SUPABASE_URL = "https://nwndxznmtfqbqyavlxtd.supabase.co";
 const SUPABASE_KEY = "sb_publishable_KgiD9NVuKzyhlWmyHAYoNw_d6UvbmQo";
 
-const supabase = window.supabase.createClient(
+const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
@@ -68,7 +68,7 @@ function createEntryElement(entry) {
 async function renderEntries() {
   guestbookEntries.innerHTML = "";
 
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from("guestbook_entries")
     .select("id, name, message, created_at")
     .order("created_at", { ascending: false })
@@ -91,14 +91,14 @@ async function renderEntries() {
 
 async function updateVisitorCounter() {
   if (!sessionStorage.getItem(VISIT_SESSION_KEY)) {
-    const { error } = await supabase.from("site_visits").insert({});
+    const { error } = await supabaseClient.from("site_visits").insert({});
 
     if (!error) {
       sessionStorage.setItem(VISIT_SESSION_KEY, "true");
     }
   }
 
-  const { count, error } = await supabase
+  const { count, error } = await supabaseClient
     .from("site_visits")
     .select("*", { count: "exact", head: true });
 
